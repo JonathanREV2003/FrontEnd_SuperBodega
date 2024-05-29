@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <link rel="stylesheet" href="Catalogo.css">
+</head>
+<body>
+    <h1>Catalogo de productos</h1>
+    <div>
+        <label for="category">Filtrar por categoria:</label>
+        <input type="text" id="category" placeholder="Enter category">
+        <button onclick="fetchProducts()">Filter</button>
+    </div>
+    <div id="product-list"></div>
+    <div id="pagination">
+        <button onclick="previousPage()" id="prev-btn">Previo</button>
+        <button onclick="nextPage()" id="next-btn">Siguiente</button>
+    </div>
+    <script src="Catalogo.js"></script>
+</body>
+</html>
