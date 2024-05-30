@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sección de Cliente</title>
+    <link rel="stylesheet" href="Cliente.css">
+</head>
+<body>
+    <div id="cliente">
+        <h2>Agregar Cliente</h2>
+        <form id="clienteForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="direccion">Dirección:</label>
+            <textarea id="direccion" name="direccion"></textarea>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email">
+            <button type="submit">Agregar Cliente</button>
+        </form>
+
+        <div class="cliente-list">
+            <h2>Lista de Clientes</h2>
+            <ul id="clienteList"></ul>
+        </div>
+    </div>
+
+    <script src="Cliente.js"></script>
+</body>
+</html>
