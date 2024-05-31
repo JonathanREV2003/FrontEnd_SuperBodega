@@ -146,3 +146,39 @@ document.querySelectorAll('.tab-button').forEach(button => {
         document.getElementById(button.dataset.tab).classList.add('active');
     });
 });
+
+//editar cliente
+document.getElementById('editClientForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const clientId = document.getElementById('editClientId').value;
+    const cliente = {
+        nombre: document.getElementById('editNombre').value,
+        apellido: document.getElementById('editApellido').value,
+        direccion: document.getElementById('editDireccion').value,
+        telefono: document.getElementById('editTelefono').value,
+        email: document.getElementById('editEmail').value
+    };
+
+    fetch(`http://localhost:8080/api/clientes/${clientId}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(cliente)
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Error en la solicitud');
+        }
+    })
+    .then(data => {
+        document.getElementById('editMessage').innerText = 'Cliente actualizado con éxito!';
+        document.getElementById('editClientForm').reset();
+    })
+    .catch(error => {
+        document.getElementById('editMessage').innerText = 'Error al actualizar el cliente';
+    });
+});
