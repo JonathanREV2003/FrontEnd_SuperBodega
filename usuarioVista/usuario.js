@@ -5,7 +5,8 @@ const comprarBtn = document.getElementById('comprarBtn');
 
 // Agregar event listeners a los botones
 catalogoBtn.addEventListener('click', () => {
-    // Lógica para mostrar el catálogo
+    
+    window.location.href = 'Catalogo.html';
     console.log('Mostrando catálogo');
 });
 
