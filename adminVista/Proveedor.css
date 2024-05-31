@@ -1,0 +1,55 @@
+/* Estilos para la sección de Proveedor */
+#proveedor h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#proveedor form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+#proveedor label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#proveedor input,
+#proveedor textarea {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#proveedor button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#proveedor button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#proveedor .proveedor-list {
+    margin-top: 20px;
+}
+
+#proveedor .proveedor-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#proveedor .proveedor-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
