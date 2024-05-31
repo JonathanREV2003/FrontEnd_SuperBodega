@@ -1,32 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sección de Cliente</title>
-    <link rel="stylesheet" href="Cliente.css">
+    <title>Agregar Cliente</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div id="cliente">
-        <h2>Agregar Cliente</h2>
-        <form id="clienteForm">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <label for="direccion">Dirección:</label>
-            <textarea id="direccion" name="direccion"></textarea>
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono">
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email">
-            <button type="submit">Agregar Cliente</button>
-        </form>
 
-        <div class="cliente-list">
-            <h2>Lista de Clientes</h2>
-            <ul id="clienteList"></ul>
+<body>
+    <div class="container">
+
+        <div class="sidenav" id="mySidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#" onclick="showSection('addProduct')">Agregar Cliente</a>
+            <a href="#" onclick="showSection('showProducts')">Mostrar Cliente</a>
+            <a href="#" onclick="showSection('editProduct')">Editar Cliente</a>
+        </div>
+    
+        <div id="main">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menú</span>
+    
+            <div id="addProduct" class="section">
+                <h2>Agregar Cliente</h2>
+                <!-- formulario para agregar un producto -->
+                <form id="clienteForm">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+        
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required>
+        
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="direccion" required>
+        
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" id="telefono" name="telefono" required>
+        
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <button type="submit">Agregar Cliente</button>
+                </form>
+                <div id="message"></div>
+        
+            </div>
+            <div id="showProducts" class="section" style="display:none">
+                <h2>Mostrar Cliente</h2>
+                <!-- código para mostrar los productos -->
+                <div class="container">
+                    <div class="tabs">
+                        <button class="tab-button active" data-tab="view-clients">Ver Clientes</button>
+                        <button class="tab-button" data-tab="add-client">Agregar Cliente</button>
+                    </div>
+            
+                    <div class="tab-content active" id="view-clients">
+                        <ul id="client-list"></ul>
+                    </div>
+                
+                    <div class="tab-content" id="add-client" style="display: none;">
+                        <form id="add-client-form">
+                            <label for="client-name">Nombre:</label>
+                            <input type="text" id="client-name" name="nombre" required>
+                            <label for="client-apellido">Apellido:</label>
+                            <input type="text" id="client-apellido" name="apellido" required>
+                            <label for="client-direccion">Dirección:</label>
+                            <input type="text" id="client-direccion" name="direccion" required>
+                            <label for="client-telefono">Teléfono:</label>
+                            <input type="text" id="client-telefono" name="telefono" required>
+                            <label for="client-email">Email:</label>
+                            <input type="email" id="client-email" name="email" required>
+                            <button type="submit">Agregar Cliente</button>
+                        </form>
+                        <div id="message"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="editProduct" class="section" style="display:none">
+                <h2>Editar Cliente</h2>
+                <!--  código para editar un producto -->
+  
+            </div>
         </div>
     </div>
-
     <script src="Cliente.js"></script>
 </body>
 </html>
