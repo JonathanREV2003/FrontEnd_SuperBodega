@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     productDescription.classList.add('product-description');
                     productDescription.textContent = product.descriotion; 
 
+                    
                     const deleteButton = document.createElement('button');
                     deleteButton.textContent = 'Eliminar';
                     deleteButton.addEventListener('click', () => {
