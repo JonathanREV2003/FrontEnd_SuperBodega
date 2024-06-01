@@ -11,11 +11,11 @@ catalogoBtn.addEventListener('click', () => {
 });
 
 pedidosBtn.addEventListener('click', () => {
-    // Lógica para mostrar los pedidos
+    window.location.href = 'CatalogoCompras.html';
     console.log('Mostrando pedidos');
 });
 
 comprarBtn.addEventListener('click', () => {
-    // Lógica para comprar productos
+    window.location.href = 'Compras.html';
     console.log('Comprando productos');
 });

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realizar Compra</title>
+    <link rel="stylesheet" href="Compras.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Realizar Compra</h1>
+        <form id="compraForm">
+            <label for="clienteId">ID del Cliente:</label>
+            <input type="number" id="clienteId" name="clienteId" required>
+
+            <label for="productoIds">IDs de los Productos (separados por comas):</label>
+            <input type="text" id="productoIds" name="productoIds" required>
+
+            <button type="submit">Comprar</button>
+        </form>
+        <div id="response"></div>
+    </div>
+    <script src="Compras.js"></script>
+</body>
+</html>

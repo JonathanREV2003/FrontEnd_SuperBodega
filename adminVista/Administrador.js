@@ -14,6 +14,6 @@ document.getElementById('btnProveedores').addEventListener('click', function() {
 });
 
 document.getElementById('btnCompra').addEventListener('click', function() {
-    
+    window.location.href = '../usuarioVista/Carrito.html';
     alert('Compra');
 });
